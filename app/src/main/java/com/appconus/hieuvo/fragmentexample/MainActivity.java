@@ -4,6 +4,7 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements FragmentA.OnFragmentInteractionListener, FragmentB.OnFragmentInteractionListener {
 
@@ -28,5 +29,13 @@ public class MainActivity extends AppCompatActivity implements FragmentA.OnFragm
     public void openB(View v) {
         getSupportFragmentManager().beginTransaction().show(getSupportFragmentManager().findFragmentByTag("B")).commit();
         getSupportFragmentManager().beginTransaction().hide(getSupportFragmentManager().findFragmentByTag("A")).commit();
+    }
+
+    public void textViewClick(View v) {
+        if (v.getId() == R.id.tvA) {
+            Toast.makeText(this, "A", Toast.LENGTH_SHORT).show();
+        } else if (v.getId() == R.id.tvB) {
+            Toast.makeText(this, "B", Toast.LENGTH_SHORT).show();
+        }
     }
 }

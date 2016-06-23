@@ -7,9 +7,12 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/tvB"
         android:layout_centerInParent="true"
+        android:padding="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="textViewClick"
         android:text="Fragment B" />
 
 </RelativeLayout>
